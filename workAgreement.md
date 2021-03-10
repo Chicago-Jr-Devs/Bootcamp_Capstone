@@ -1,6 +1,6 @@
 # We the coders
 
-1. Develop a sense of shared responsability
+1. Develop a sense of shared responsibility
 
 2. Increase members' awareness of their own behavior
 
@@ -10,7 +10,7 @@
 
 5. Show respect: don't interupt, accept and talk through disagreement
 
-6. Make sure that every members is on board with a decision and was able to express itself
+6. Make sure that every members is on board with a decision and was able to express themselves
 
 
 ## What happen when agreement is boken
