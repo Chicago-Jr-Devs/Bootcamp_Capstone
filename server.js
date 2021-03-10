@@ -1,6 +1,6 @@
 require("dotenv").config();
 const express = require("express");
-
+const session = require("express-session")
 const passport = require("./config/passport");
 const routes = require("./routes");
 
@@ -17,6 +17,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 
+
+
+// We need to use sessions to keep track of our user's login status
 app.use(
   session({
     secret: process.env.SESSION_SECRET,
@@ -26,6 +29,20 @@ app.use(
 );
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(
+  session({
+    secret: process.env.SESSION_SECRET,
+    resave: true,
+    saveUninitialized: true,
+  })
+);
+app.use(passport.initialize());
+app.use(passport.session());
+
+
+
+
+
 
 app.use(routes);
 
