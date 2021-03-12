@@ -1,9 +1,15 @@
 import './Register.css';
+import { Header, Input, RegisterBtn } from "../../components/Register"
 
 export default function Register(){
     return (
+        
         <div>
-            <h1>Register</h1>
-        </div>
+            <Header />
+            <Input />
+            <RegisterBtn />
+
+         </div>
+        
     )
-}
+};
