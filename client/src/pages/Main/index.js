@@ -1,5 +1,6 @@
 import React from "react"
 import { UserSide, SoapboxSide, CategorySide } from "../../components/MainSide"
+import { HeaderWall, SearchWall, CardWall } from "../../components/MainWall"
 
 // Import material UI components
 import { makeStyles } from '@material-ui/core/styles';
@@ -26,8 +27,14 @@ export default function Main(){
                     <CategorySide />
                 </Grid>
 
-                <Grid item xs={12} sm={9}>
-                {/* add header + search + card here */}
+                <Grid item xs={12} sm={6}>
+                    <HeaderWall />
+                    <SearchWall />
+                    <CardWall />
+                </Grid>
+
+                <Grid item xs={12} sm={3}>
+                    {/* empty space on  desktop       */}
                 </Grid>
             </Grid>
         </div>
