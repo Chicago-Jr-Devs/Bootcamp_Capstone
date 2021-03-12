@@ -1,5 +1,5 @@
 import Consent from "./pages/Consent";
-import Home from "./pages/Home";
+import Main from "./pages/Main";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import React from "react";
@@ -16,7 +16,7 @@ function App() {
     <div>
       <p>Hello World</p>
       <Consent />
-      <Home />
+      <Main />
       <Register />
       <Login />
     </div>
