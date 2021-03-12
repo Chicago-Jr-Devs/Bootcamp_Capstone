@@ -1,9 +1,12 @@
 import './Login.css';
+import { Header, Input, FormBtn } from "../../components/LoginForm"
 
 export default function Login(){
     return (
         <div>
-            <h1>Login</h1>
+            <Header />
+            <Input />
+            <FormBtn />
         </div>
     )
 }
