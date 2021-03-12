@@ -17,23 +17,15 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    street_address: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    city: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    state: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
     zipcode: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    county: {
+    ward: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    precinct: {
       type: DataTypes.STRING,
       allowNull: false,
     },
