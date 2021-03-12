@@ -1,4 +1,6 @@
 import React from 'react';
+
+// Import material UI components
 import TextField from '@material-ui/core/TextField';
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -22,37 +24,36 @@ export function Input(props) {
           <p>Enter an email:</p>
         <TextField
           required
-          id="outlined-required"
-          defaultValue="Enter your email"
+          id="register-input-email"
+          label="Enter your email"
           variant="outlined"
         />
         <p>Enter a password:</p>
         <TextField
           required
-          id="outlined-required"
-          defaultValue="Enter your password"
-          variant="outlined"
-        />
-        <p>Last Name:</p>
-        <TextField
-          required
-          id="outlined-required"
-          defaultValue="Enter your first name"
+          id="register-input-password"
+          label="Enter your password"
           variant="outlined"
         />
         <p>First Name:</p>
         <TextField
           required
-          id="outlined-required"
-          defaultValue="Enter your last name"
+          id="register-input-first-name"
+          label="Enter your last name"
+          variant="outlined"
+        />
+        <p>Last Name:</p>
+        <TextField
+          required
+          id="register-input-last-name"
+          label="Enter your first name"
           variant="outlined"
         />
         <p>Zip Code:</p>
         <TextField
           required
-          id="outlined-required"
-          label="Required"
-          defaultValue="Zip Code"
+          id="register-input-zip"
+          label="Zip Code"
           variant="outlined"
         />
        

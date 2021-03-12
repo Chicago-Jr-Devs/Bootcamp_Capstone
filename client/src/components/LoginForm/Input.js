@@ -1,15 +1,6 @@
-// import React from 'react';
-
-// export function Input() {
-//   return (
-//     <form>
-//       <input id="login-email" label="Email"></input>
-//       <input id="login-password" label="Password" type="password"></input>
-//     </form>
-//   );
-// }
-
 import React from 'react';
+
+// Import material UI components
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 

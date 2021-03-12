@@ -1,4 +1,6 @@
 import React from 'react';
+
+// Import material UI components
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 
