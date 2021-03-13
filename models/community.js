@@ -10,11 +10,11 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false,
     },
     issue_category: {
-      type: DataTypes.INT,
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
     issue_id: {
-      type: DataTypes.INT,
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
   });
