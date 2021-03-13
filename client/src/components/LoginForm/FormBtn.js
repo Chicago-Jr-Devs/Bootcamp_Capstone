@@ -4,6 +4,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 
+
 const useStyles = makeStyles((theme) => ({
   root: {
     '& > *': {
@@ -16,10 +17,13 @@ export function FormBtn() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
-      <Button variant="contained" color="primary">
-        Primary
-      </Button>
-    </div>
+      <div className={classes.root}>
+        <Button variant="contained" color="primary">
+          Sign in
+        </Button>
+        <Button variant="outlined" color="primary">
+          Register
+        </Button>
+      </div>
   );
 }
