@@ -1,3 +1,5 @@
+
+![logo1](https://user-images.githubusercontent.com/71859422/111025795-37e06b00-83ac-11eb-81f8-20515c99e022.jpg)
 # SoapBox: A platform that elevates the voice of your community
 
 ## Description/Motivation
@@ -21,8 +23,16 @@ Our application consists of four interfaces: a log-in page, a sign-up page, an a
 
 On the main page, the user can create petitions, post commentary about various topics (e.g., education, law enforcement, infrastructure, transportation, environment, public spaces, public policy, etc.) by clickling on the "Make a SoapBox" button, and view access information concerning local elections.
 
-## Tech Used
-This web page was created using HTML, CSS, JavaScript, SQL, node, express, passport and a Sequelize ORM. Our team utilized [INSERT NAME HERE] – a public CSS library – to create a more aesthetically pleasing interface for the user. Moreover, we made use of Kanban on GitHub to create, delegate, and manage tasks for this project; tasks were divided into two groups: front-end and back-end. Finally, our application was deployed via Heroku.
+## Made With
+<img alt="Material UI" src="https://img.shields.io/badge/material%20ui%20-%230081CB.svg?&style=for-the-badge&logo=material-ui&logoColor=white"/> 
+<img alt="NodeJS" src="https://img.shields.io/badge/node.js%20-%2343853D.svg?&style=for-the-badge&logo=node.js&logoColor=white"/>
+<img alt="JavaScript" src="https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/>
+<img alt="Express.js" src="https://img.shields.io/badge/express.js%20-%23404d59.svg?&style=for-the-badge"/>
+<img alt="React" src="https://img.shields.io/badge/react%20-%2320232a.svg?&style=for-the-badge&logo=react&logoColor=%2361DAFB"/>
+<img alt="Heroku" src="https://img.shields.io/badge/heroku%20-%23430098.svg?&style=for-the-badge&logo=heroku&logoColor=white"/>
+<img alt="MySQL" src="https://img.shields.io/badge/mysql-%2300f.svg?&style=for-the-badge&logo=mysql&logoColor=white"/>
+
+This web page was created using HTML, CSS, JavaScript, SQL, node, express, passport and a Sequelize ORM. Our team utilized Material-Ui – a public CSS library – to create a more aesthetically pleasing interface for the user. Moreover, we made use of Kanban on GitHub to create, delegate, and manage tasks for this project; tasks were divided into two groups: front-end and back-end. Finally, our application was deployed via Heroku.
 
 During the initial stages of the project, we used a wire-framing tool to create a blueprint for the web page, which helped us visualize and establish a preliminary structural layout. Ossatures for both the desktop and mobile versions of the app were created for each individual page of our application. Below, please find images of our initial schematics, which were created on Whimsical. To optimize user experience, the desktop and mobile versions of the application contain several display differences.
 
@@ -35,6 +45,12 @@ About Page (Desktop Display)
 Mobile Display
 
 ![SoapBox Image 3](https://user-images.githubusercontent.com/71603259/110885842-8ced8580-82b5-11eb-8fa7-3d0707871c43.GIF)
+
+
+Database Structure through mySQL
+
+
+![Soapbox Image 4](https://user-images.githubusercontent.com/71859422/111025338-1af66880-83a9-11eb-9175-341ff36b5127.png)
 
 ## Sources
 - Whimsical (www.whimsical.com)
