@@ -22,7 +22,7 @@ export default function App() {
           <Route path="/register">
             <Register />
           </Route>
-          <Route path="/main">
+          <Route path="/home">
             <Main />
           </Route>
           <Route path="/consent">
