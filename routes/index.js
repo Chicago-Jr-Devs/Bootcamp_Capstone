@@ -6,6 +6,23 @@ const db = require("../models")
 // router.use("/api", apiRoutes);
 // If no API routes are hit, send the React app
 
+// POST route for saving a new todo
+app.post("/users", function(req, res) {
+  console.log("server hi", req.body);
+  // create takes an argument of an object describing the item we want to
+  // insert into our table. In this case we just we pass in an object with a text
+  // and complete property (req.body)
+  db.User.create({
+    email: req.body.email,
+    password: req.body.password,
+    firstName: req.body.firstName,
+    lastName: req.body.lastName,
+    zipCode: req.body.zipCode
+  }).then(function(dbUser) {
+    // We have access to the new todo as an argument inside of the callback function
+    res.json(dbUser);
+  });
+});
 
 //Here, we are using the passport.authenticate middleware with our local strategy.
 //If the user inputs valid log-in credentials, the application will redirect them to the main page.
