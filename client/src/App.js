@@ -1,26 +1,35 @@
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+//Import react pages 
 import Consent from "./pages/Consent";
 import Main from "./pages/Main";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import React from "react";
-import ReactDOM from "react-dom";
-
+//Import style sheet 
 import './App.css';
 
+// ReactDOM.render(<App />, document.getElementById("root"));
 
-//import Home from './pages/Home'
-function App() {
+export default function App() {
 
-  // ReactDOM.render(<App />, document.getElementById("root"));
   return (
-    <div>
-      <p>Hello World</p>
-      <Consent />
-      <Main />
-      <Register />
-      <Login />
-    </div>
+    <Router>
+      <div>
+        <Switch>
+          <Route exact path="/">
+            <Login />
+          </Route>
+          <Route path="/register">
+            <Register />
+          </Route>
+          <Route path="/main">
+            <Main />
+          </Route>
+          <Route path="/consent">
+            <Consent />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
-
-export default App;
