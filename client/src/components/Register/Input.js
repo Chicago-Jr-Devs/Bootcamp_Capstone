@@ -39,7 +39,7 @@ export function Input({handleData}) {
         <p>First Name:</p>
         <TextField
           required
-          id="firstName"
+          id="first_name"
           label="Enter your last name"
           variant="outlined"
           onChange={handleData}
@@ -47,7 +47,7 @@ export function Input({handleData}) {
         <p>Last Name:</p>
         <TextField
           required
-          id="lastName"
+          id="last_name"
           label="Enter your first name"
           variant="outlined"
           onChange={handleData}

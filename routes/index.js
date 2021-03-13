@@ -9,7 +9,7 @@ const passport = require("../config/passport");
 // If no API routes are hit, send the React app
 
 // POST route for saving a new todo
-app.post("/users", function(req, res) {
+router.post("/users", function(req, res) {
   console.log("server hi", req.body);
   // create takes an argument of an object describing the item we want to
   // insert into our table. In this case we just we pass in an object with a text

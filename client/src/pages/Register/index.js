@@ -4,7 +4,7 @@ import { Header, Input, RegisterBtn } from "../../components/Register"
 import './Register.css';
 
 export default function Register(){
-    const [user, setUser] = useState({email:'', password:'', firstName:'', lastName:'', zipCode:''});
+    const [user, setUser] = useState({email:'', password:'', first_name:'', last_name:'', zipcode:''});
     const [users, setUsers] = useState([]);
 
     const handleData = (event) => {
@@ -18,7 +18,7 @@ export default function Register(){
         await axios.post('/users', user)
         
         setUsers([...users, user])
-        setUser({email:'', password:'', firstName:'', lastName:'', zipCode:''})
+        setUser({email:'', password:'', first_name:'', last_name:'', zipcode:''})
     }
 
     useEffect(() => console.log("user", users), [users]);
