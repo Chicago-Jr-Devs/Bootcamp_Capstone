@@ -3,9 +3,9 @@
 # SoapBox: A platform that elevates the voice of your community
 
 ## Description/Motivation
-Have you ever noticed an issue in your community--a street marred by potholes after routine winter salting, a historic building on the verge of collapse, unequal access to education, or inefficient public transportation--but not known how to take action? Have you ever had ideas about how to improve law enforcement or make the community more green but struggled to find local, like-minded people? If so, then look no further! True to its name, SoapBox provides people like you with an informal, non-partisan platform to voice opinions and concerns about the community.
+Have you ever noticed an issue in your community – a street marred by potholes after routine winter salting, a historic building on the verge of collapse, unequal access to education, or inefficient public transportation – but not known how to take action? Have you ever had ideas about how to improve law enforcement or make the community more green but struggled to find local, like-minded people? While on a walk, have you ever passed by a flyer about a candidate in a local election and wondered: "Who is that? And what do they support?"
 
-As a platform designed to elevate and amplify local voices, SoapBox affords users a space to connect with others in their community to address real issues and foster a sense of local activism. Often times, small communities feel overlooked by representatives who aren't always actutely aware of the needs and concerns of their constituents. Our intent with this application is to provide all communities and neighborhoods--large and small--with an avenue via which their residents can express opinions and feel heard.
+If so, then look no further! True to its name, SoapBox provides people like you with an informal, non-partisan platform to voice opinions and concerns about the community. As a platform designed to elevate and amplify local voices, SoapBox affords users a space to connect with others in their community to address real issues and foster a sense of local activism. Often times, small communities feel overlooked by representatives who aren't always actutely aware of the needs and concerns of their constituents. Our intent with this application is to provide all communities and neighborhoods – large and small – with an avenue via which their residents can express opinions and feel heard.
 
 
 ## Installation
@@ -21,7 +21,9 @@ When signing up for an account, the application will require the user to input d
 ## Usage
 Our application consists of four interfaces: a log-in page, a sign-up page, an about us page, and a page where the user can post comments or create petitions that can be viewed by other users in their community. When a user without an account arrives at the log-in page, they can click on the "Sign Up" button to be redirected to the sign-up page. Once there, they will be able to create a personal account. After an account has been created, the user can return to the log-in page and enter their account credentials into the input fields to access the main page.
 
-On the main page, the user can create petitions, post commentary about various topics (e.g., education, law enforcement, infrastructure, transportation, environment, public spaces, public policy, etc.) by clickling on the "Make a SoapBox" button, and view access information concerning local elections.
+On the main page the user can create petitions, post commentary about various topics (e.g., education, law enforcement, infrastructure, transportation, environment, public spaces, public policy, etc.) by clicking on the "Make a SoapBox" button, and access information concerning local elections. After a comment or petition has been created, other members of the community who have accounts on the application can give the post a "Yea" or "Nay" and show how they feel about the matter at hand. The more "Yea"s an individual post recieves, the more priority it will be given on the web page: Posts with the most supporters will be displayed higher up on the screen.
+
+Since one of the objectives of our application is to show local representatives the main points of concern in local communities, we wanted to make sure that issues with the most support have the most visibility on our web page. That way, should a representative utilize information from our web page to craft new policies or relay messages, they will be presented with a ranked list of actionable intelligence in tune with the thoughts of the local community.
 
 ## Made With
 <img alt="Material UI" src="https://img.shields.io/badge/material%20ui%20-%230081CB.svg?&style=for-the-badge&logo=material-ui&logoColor=white"/> 
@@ -32,7 +34,7 @@ On the main page, the user can create petitions, post commentary about various t
 <img alt="Heroku" src="https://img.shields.io/badge/heroku%20-%23430098.svg?&style=for-the-badge&logo=heroku&logoColor=white"/>
 <img alt="MySQL" src="https://img.shields.io/badge/mysql-%2300f.svg?&style=for-the-badge&logo=mysql&logoColor=white"/>
 
-This web page was created using HTML, CSS, JavaScript, SQL, node, express, passport and a Sequelize ORM. Our team utilized Material-Ui – a public CSS library – to create a more aesthetically pleasing interface for the user. Moreover, we made use of Kanban on GitHub to create, delegate, and manage tasks for this project; tasks were divided into two groups: front-end and back-end. Finally, our application was deployed via Heroku.
+This web page was created using HTML, CSS, JavaScript, SQL, node, express, passport, and a Sequelize ORM. Our team utilized Material-Ui – a public CSS library – to create a more aesthetically pleasing interface for the user. Moreover, we made use of Kanban on GitHub to create, delegate, and manage tasks for this project; tasks were divided into two groups: front-end and back-end. Finally, our application was deployed via Heroku.
 
 During the initial stages of the project, we used a wire-framing tool to create a blueprint for the web page, which helped us visualize and establish a preliminary structural layout. Ossatures for both the desktop and mobile versions of the app were created for each individual page of our application. Below, please find images of our initial schematics, which were created on Whimsical. To optimize user experience, the desktop and mobile versions of the application contain several display differences.
 
@@ -54,6 +56,7 @@ Database Structure through mySQL
 
 ## Sources
 - Whimsical (www.whimsical.com)
+- Google Civic Information API (https://developers.google.com/civic-information)
 
 
 ## Additional Information
