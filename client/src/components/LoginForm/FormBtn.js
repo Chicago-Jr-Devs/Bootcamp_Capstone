@@ -16,10 +16,13 @@ export function FormBtn() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
-      <Button variant="contained" color="primary">
-        Primary
-      </Button>
-    </div>
+      <div className={classes.root}>
+        <Button variant="contained" color="primary">
+          Sign in
+        </Button>
+        <Button variant="outlined" color="primary">
+          Register
+        </Button>
+      </div>
   );
 }
