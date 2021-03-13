@@ -1,6 +1,8 @@
 const path = require("path");
 const router = require("express").Router();
-const db = require("../models")
+const db = require("../models");
+const passport = require("../config/passport");
+
 // const apiRoutes = require("./api");
 // API Routes
 // router.use("/api", apiRoutes);
