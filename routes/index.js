@@ -6,14 +6,23 @@ const db = require("../models")
 // router.use("/api", apiRoutes);
 // If no API routes are hit, send the React app
 
+
+//Here, we are using the passport.authenticate middleware with our local strategy.
+//If the user inputs valid log-in credentials, the application will redirect them to the main page.
+//If not, an informative error message will be displayed on the screen.
 router.post("/login", passport.authenticate("local"), (req,res) => {
   res.json({
     email: req.user.email,
+    username: req.user.username,
     firstName: req.user.first_name,
     lastName: req.user.last_name
   });
 });
 
+
+//Here, we have the route for the user's sign-up process. The password associated with an account is automatically hashed and securely stored due to our configurations.
+//If a user account has been successfully created, they will be able to proceed to the log-in page.
+//In the instance that an account has not been successfully created, the user will be sent an informative error message.
 router.post("/signup", (req, res) => {
   db.User.create(req.body)
   .then(() => {
@@ -24,10 +33,13 @@ router.post("/signup", (req, res) => {
   });
 });
 
+
+//This route allows user data to be retrieved and used on the client side.
 router.get("/user_data", (req, res) => {
+ //In the instance that a user is not logged in, an empty object will be returned.
   if(!req.user) {
     return res.json({});
-  }
+  } 
   const { password, ...user } = req.user;
   res.json(user);
 });
