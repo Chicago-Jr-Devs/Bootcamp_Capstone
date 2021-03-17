@@ -45,6 +45,7 @@ About Page (Desktop Display)
 ![SoapBox Image 2](https://user-images.githubusercontent.com/71603259/110885811-819a5a00-82b5-11eb-8738-4f38fde17eed.GIF)
 
 Mobile Display
+- In addition to creating an application that runs on desktops and laptops, we wanted to make SoapBox mobile-responsive as well. Mobile phones have become ubiquitous in society – almost everyone is connected to the Internet via cellular devices. If a SoapBox user is out on a walk one morning or afternoon and takes note of something they want to share on the platform – perhaps they noticed an infrastructural or ecological issue – they can do so easily and efficiently on the go. Although the visual display differs slightly on mobile devices, we tailored the layout so that it would provide an intuitive experience for the user.
 
 ![SoapBox Image 3](https://user-images.githubusercontent.com/71603259/110885842-8ced8580-82b5-11eb-8fa7-3d0707871c43.GIF)
 
