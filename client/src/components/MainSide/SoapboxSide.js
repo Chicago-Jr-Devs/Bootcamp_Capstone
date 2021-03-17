@@ -44,14 +44,15 @@ const categories = [
         value: "other",
         label: "Other"
     }
-  ];
+];
+
 const useStyles = makeStyles((theme) => ({
     root: {
-        '& .MuiTextField-root': {
-            margin: theme.spacing(1),
-            width: '25ch',
+      '& .MuiTextField-root': {
+      margin: theme.spacing(1),
+      width: '25ch',
       flexGrow: 1,
-        },
+      },
     },
     modal: {
         display: 'flex',
@@ -65,10 +66,7 @@ const useStyles = makeStyles((theme) => ({
         padding: theme.spacing(2, 4, 3),
         width: "200px"
       },
-}
-));
-
-
+}));
 
 const Fade = React.forwardRef(function Fade(props, ref) {
     const { in: open, children, onEnter, onExited, ...other } = props;
@@ -92,117 +90,123 @@ const Fade = React.forwardRef(function Fade(props, ref) {
         {children}
       </animated.div>
     );
-  });
+});
   
-  Fade.propTypes = {
-    children: PropTypes.element,
-    in: PropTypes.bool.isRequired,
-    onEnter: PropTypes.func,
-    onExited: PropTypes.func,
-  };
+Fade.propTypes = {
+  children: PropTypes.element,
+  in: PropTypes.bool.isRequired,
+  onEnter: PropTypes.func,
+  onExited: PropTypes.func,
+};
 
 
 export function SoapboxSide(props){
-    const classes = useStyles();
+  const classes = useStyles();
 
-    const [category, setCategory] = React.useState("EUR");
+  const [category, setCategory] = React.useState("EUR");
 
-    const handleChange = (event) => {
-        setCategory(event.target.value);
-    };
-    
-    const [open, setOpen] = React.useState(false);
-
-    const handleOpen = () => {
-      setOpen(true);
-    };
+  const handleChange = (event) => {
+      setCategory(event.target.value);
+  };
   
-    const handleClose = () => {
-      setOpen(false);
-    };
+  const [open, setOpen] = React.useState(false);
 
-    return (
-        <div className={classes.root}>
-            <Grid container spacing={4}>
-                <Grid item sm={12}>
-                    <div>
-                        <h3>Create a Soapbox</h3>
-                        <p>Voice your issue and get your community to engage a conversation with you.</p>
-                        <Button variant="contained" color="primary" type="button" onClick={handleOpen}>
-                            Get my Soapbox!
-                        </Button>
-                        <Modal
-                        aria-labelledby="spring-modal-title"
-                        aria-describedby="spring-modal-description"
-                        className={classes.modal}
-                        open={open}
-                        onClose={handleClose}
-                        closeAfterTransition
-                        BackdropComponent={Backdrop}
-                        BackdropProps={{
-                        timeout: 500,
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  return (
+    <div className={classes.root}>
+      <Grid container spacing={4}>
+        <Grid item sm={12}>
+          <div>
+              <h3>Create a Soapbox</h3>
+              <p>Voice your issue and get your community to engage a conversation with you.</p>
+              <Button variant="contained" color="primary" type="button" onClick={handleOpen}>
+                  Get my Soapbox!
+              </Button>
+
+              <Modal
+                aria-labelledby="spring-modal-title"
+                aria-describedby="spring-modal-description"
+                className={classes.modal}
+                open={open}
+                onClose={handleClose}
+                closeAfterTransition
+                BackdropComponent={Backdrop}
+                BackdropProps={{
+                timeout: 500,
+                }}
+              >
+
+              <Fade in={open}>
+                <div className={classes.paper}>
+                  <h2 id="spring-modal-title">Create your Soapbox</h2>
+                  <p id="spring-modal-description">Enter and submit your concern or idea.</p>
+                  <div style={{marginTop: 20}}>
+                    <TextField
+                        id="soapbox-categories"
+                        select
+                        label="Select Category"
+                        value={category}
+                        onChange={handleChange}
+                        SelectProps={{
+                            native: true
                         }}
-                    >
-                        <Fade in={open}>
-                        <div className={classes.paper}>
-                            <h2 id="spring-modal-title">Submit</h2>
-                            <p id="spring-modal-description">Submit</p>
-                            <div style={{marginTop: 20}}>
-                                <TextField
-                                    id="soapbox-categories"
-                                    select
-                                    label="Select Category"
-                                    value={category}
-                                    onChange={handleChange}
-                                    SelectProps={{
-                                        native: true
-                                    }}
-                                    helperText="Please select a category"
-                                    variant="outlined"
-                                    >
-                                    {categories.map((option) => (
-                                        <option key={option.value} value={option.value}>
-                                        {option.label}
-                                        </option>
-                                    ))}
-                                    </TextField>
-                                    </div>
-                            <div style={{marginTop: 20}}>
-                            <TextField
-                                required
-                                id="soapbox-subject"
-                                label="Subject"
-                                variant="outlined"
-                                />
-                                </div>
-                               
-                                    <div style={{marginTop: 20}}>
-                                    <TextField
-                                required
-                                id="soapbox-address"
-                                label="Address"
-                                variant="outlined"
-                                />
-                                </div>
-                                <div style={{marginTop: 20}}>
-                                 <TextField
-                                required
-                                id="soapbox-description"
-                                label="Description"
-                                variant="outlined"
-                                />
-                                </div>
-                                <div style={{marginTop: 20}}>
-                                <Button variant="contained" color="primary" type="button">
-                            Publish
-                        </Button>
-                        </div>
-                        </div>
-                        </Fade>
-                    </Modal>
-                    </div>
-                </Grid>
+                        helperText="Please select a category"
+                        variant="outlined"
+                        >
+                        {categories.map((option) => (
+                            <option key={option.value} value={option.value}>
+                            {option.label}
+                            </option>
+                        ))}
+                    </TextField>
+                  </div>
+
+                  <div style={{marginTop: 20}}>
+                    <TextField
+                      required
+                      id="soapbox-subject"
+                      label="Subject"
+                      variant="outlined"
+                    />
+                  </div>
+                              
+                  <div style={{marginTop: 20}}>
+                    <TextField
+                      required
+                      id="soapbox-address"
+                      label="Address"
+                      variant="outlined"
+                    />
+                  </div>
+
+                  <div style={{marginTop: 20}}>
+                    <TextField
+                      required
+                      id="soapbox-description"
+                      label="Description"
+                      variant="outlined"
+                    />
+                  </div>
+                              
+                  <div style={{marginTop: 20}}>
+                    <Button variant="contained" color="primary" type="button">
+                      Publish
+                    </Button>
+                  </div>
+
+                  </div>
+                      </Fade>
+                  </Modal>
+                </div>
             </Grid>
-        </div>
-    )
+        </Grid>
+    </div>
+  )
 }
