@@ -13,51 +13,53 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export function Input(props) {
+export function Input({handleData}) {
   const classes = useStyles();
 
   return (
     <form className={classes.root} noValidate autoComplete="off">
-      
-      
       <div>
-          <p>Enter an email:</p>
+        <p>Enter an email:</p>
         <TextField
           required
-          id="register-input-email"
+          id="email"
           label="Enter your email"
           variant="outlined"
+          onChange={handleData}
         />
         <p>Enter a password:</p>
         <TextField
           required
-          id="register-input-password"
+          id="password"
           label="Enter your password"
           variant="outlined"
+          type="password" 
+          onChange={handleData}
         />
         <p>First Name:</p>
         <TextField
           required
-          id="register-input-first-name"
+          id="first_name"
           label="Enter your last name"
           variant="outlined"
+          onChange={handleData}
         />
         <p>Last Name:</p>
         <TextField
           required
-          id="register-input-last-name"
+          id="last_name"
           label="Enter your first name"
           variant="outlined"
+          onChange={handleData}
         />
         <p>Zip Code:</p>
         <TextField
           required
-          id="register-input-zip"
+          id="zipCode"
           label="Zip Code"
           variant="outlined"
+          onChange={handleData}
         />
-       
-        
       </div>
     </form>
   );
