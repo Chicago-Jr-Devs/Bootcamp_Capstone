@@ -18,8 +18,15 @@ export function Input() {
 
   return (
     <form className={classes.root} noValidate autoComplete="off">
-      <TextField id="login-form-email" label="Email" variant="outlined" />
-      <TextField id="login-form-password" label="Password" type="password" variant="outlined" />
+      <TextField 
+        id="login-form-email"
+        label="Email"
+        variant="outlined" />
+      <TextField
+        id="login-form-password" 
+        label="Password" 
+        type="password" 
+        variant="outlined" />
     </form>
   );
 }

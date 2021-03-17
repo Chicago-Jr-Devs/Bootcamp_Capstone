@@ -14,56 +14,54 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export function Input(props) {
+export function Input({handleData}) {
   const classes = useStyles();
 
   return (
     <form className={classes.root} noValidate autoComplete="off">
-      <Grid container spacing={4}>
-        <Grid item sm={12} align="center">
-          <div>
-            <p>Enter an email:</p>
-              <TextField
-                required
-                id="register-input-email"
-                label="Enter your email"
-                variant="outlined"
-              />
-
-              <p>Enter a password:</p>
-              <TextField
-                required
-                id="register-input-password"
-                label="Enter your password"
-                variant="outlined"
-              />
-
-              <p>First Name:</p>
-              <TextField
-                required
-                id="register-input-first-name"
-                label="Enter your last name"
-                variant="outlined"
-              />
-
-              <p>Last Name:</p>
-              <TextField
-                required
-                id="register-input-last-name"
-                label="Enter your first name"
-                variant="outlined"
-              />
-
-              <p>Zip Code:</p>
-              <TextField
-                required
-                id="register-input-zip"
-                label="Zip Code"
-                variant="outlined"
-              />
-            </div>
-          </Grid>
-      </Grid>
+      <div>
+        <p>Enter an email:</p>
+        <TextField
+          required
+          id="email"
+          label="Enter your email"
+          variant="outlined"
+          onChange={handleData}
+        />
+        <p>Enter a password:</p>
+        <TextField
+          required
+          id="password"
+          label="Enter your password"
+          variant="outlined"
+          type="password" 
+          onChange={handleData}
+        />
+        <p>First Name:</p>
+        <TextField
+          required
+          id="first_name"
+          label="Enter your last name"
+          variant="outlined"
+          onChange={handleData}
+        />
+        <p>Last Name:</p>
+        <TextField
+          required
+          id="last_name"
+          label="Enter your first name"
+          variant="outlined"
+          onChange={handleData}
+        />
+        <p>Zip Code:</p>
+        <TextField
+          required
+          id="zipCode"
+          label="Zip Code"
+          variant="outlined"
+          onChange={handleData}
+        />
+      </div>
     </form>
   );
 }
