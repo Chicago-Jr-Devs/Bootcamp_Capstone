@@ -5,6 +5,7 @@ import { HeaderWall, SearchWall, CardWall } from "../../components/MainWall"
 // Import material UI components
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
+import Collapse from '@material-ui/core/Collapse';
 
 // Import style sheet
 import './Main.css';
@@ -20,23 +21,26 @@ export default function Main(){
     
     return (
         <div className={classes.root}>
+            
             <Grid container spacing={4}>
+            
                 <Grid item xs={12} sm={3}>
                     <UserSide />
                     <SoapboxSide />
                     <CategorySide />
                 </Grid>
-
+                
                 <Grid item xs={12} sm={6}>
                     <HeaderWall />
                     <SearchWall />
                     <CardWall />
                 </Grid>
-
+                
                 <Grid item xs={12} sm={3}>
                     {/* empty space on  desktop       */}
                 </Grid>
             </Grid>
+            
         </div>
     )
 }
