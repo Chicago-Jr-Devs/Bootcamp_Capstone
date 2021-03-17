@@ -41,7 +41,7 @@ app.use(passport.session());
 app.use(morgan('tiny'));
 
 if (environment === 'production') {
-  app.use(express.static('client/build'));
+  app.use(express.static('/client'));
 }
 // Requiring our routes
 app.use(routes);
