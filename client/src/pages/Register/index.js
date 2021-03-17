@@ -15,7 +15,7 @@ export default function Register(){
     async function submitUser(event) {
         event.preventDefault()
         console.log("hi", user)
-        await axios.post('/users', user)
+        await axios.post('/register', user)
         
         setUsers([...users, user])
         setUser({email:'', password:'', first_name:'', last_name:'', zipcode:''})
