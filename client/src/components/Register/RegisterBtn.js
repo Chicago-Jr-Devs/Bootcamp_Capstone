@@ -10,12 +10,12 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export function RegisterBtn() {
+export function RegisterBtn({submitUser}) {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-      <Button variant="contained" color="primary">
+      <Button onClick={submitUser} variant="contained" color="primary">
         Create An Account
       </Button>
     </div>

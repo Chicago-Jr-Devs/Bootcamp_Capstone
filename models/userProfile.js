@@ -1,6 +1,6 @@
 //This model allows for the user to input the info for their profile.
 module.exports = function(sequelize, DataTypes) {
-  const Profile = sequelize.define("Profile", {
+  const user = sequelize.define("user", {
     email: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -9,31 +9,19 @@ module.exports = function(sequelize, DataTypes) {
         isEmail: true,
       },
     },
-    first_name: {
+    firstname: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    last_name: {
+    lastname: {
       type: DataTypes.STRING,
       allowNull: false,
     },
     zipcode: {
       type: DataTypes.STRING,
       allowNull: false,
-    },
-    ward: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    precinct: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    community: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
+    }
   });
 
-  return Profile;
+  return user;
 };
