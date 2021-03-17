@@ -3,6 +3,16 @@ import axios from 'axios'
 import { Header, Input, RegisterBtn } from "../../components/Register"
 import './Register.css';
 
+// Import material UI components
+import { makeStyles } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
+
+const useStyles = makeStyles((theme) => ({
+    root: {
+      flexGrow: 1,
+    }
+}));
+
 export default function Register(){
     const [user, setUser] = useState({email:'', password:'', first_name:'', last_name:'', zipcode:''});
     const [users, setUsers] = useState([]);
