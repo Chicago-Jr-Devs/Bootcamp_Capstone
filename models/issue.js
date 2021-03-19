@@ -1,6 +1,6 @@
 //This model allows the user to input their issue into the chat
 module.exports = function(sequelize, DataTypes) {
-  const issues = sequelize.define("issues", {
+  const issue = sequelize.define("issue", {
     subject: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -10,8 +10,8 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false,
     },
     category: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
+      type: DataTypes.STRING,
+      allowNull: true,
     },
     address: {
       type: DataTypes.STRING,
@@ -19,5 +19,5 @@ module.exports = function(sequelize, DataTypes) {
     }
   });
 
-  return issues;
+  return issue;
 };

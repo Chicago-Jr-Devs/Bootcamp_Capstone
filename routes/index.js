@@ -21,6 +21,18 @@ router.post("/register", (req, res) => {
   });
 })
 
+router.post("/soapbox", (req, res) => {
+  console.log("issues", req.body)
+  db.issue.create({
+    category: req.body.category,
+    subject: req.body.subject,
+    description: req.body.description,
+    address: req.body.address
+  }).then(function(dbissues) {
+    res.json(dbissues);
+  });
+})
+
 router.use(function(req, res) {
   res.sendFile(path.join(__dirname, "../client/build"));
 });
