@@ -8,11 +8,12 @@ const passport = require("../config/passport");
 // router.use("/", apiRoutes);
 
 router.post("/register", (req, res) => {
+  console.log("register", req.body)
   db.user.create({
     email: req.body.email,
     password: req.body.password,
-    firstName: req.body.firstName,
-    lastName: req.body.lastName,
+    first_name: req.body.first_name,
+    last_name: req.body.last_name,
     zipcode: req.body.zipcode
   }).then(function(dbUser) {
     // We have access to the new todo as an argument inside of the callback function
@@ -23,4 +24,5 @@ router.post("/register", (req, res) => {
 router.use(function(req, res) {
   res.sendFile(path.join(__dirname, "../client/build"));
 });
+
 module.exports = router;

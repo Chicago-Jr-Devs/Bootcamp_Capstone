@@ -1,4 +1,5 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
+import axios from "axios";
 
 // Import material UI components
 import PropTypes from 'prop-types';
@@ -101,6 +102,23 @@ Fade.propTypes = {
 
 
 export function SoapboxSide(props){
+  const [soapbox, setSoapbox] = useState({category: "", subject: "", address: "", description: ""});
+  const [soapboxes, setSoapboxes] = useState([])
+
+  async function submitSoapbox(event) {
+    event.preventDefault()
+    console.log("hi", soapbox)
+    await axios.post('/soapbox', soapbox)
+    
+    setSoapboxes([...soapboxes, soapbox])
+    setSoapbox({category: "", subject: "", address: "", description: ""})
+  }
+  
+  const handleSoapbox = (event) => {
+    const {id, value} = event.target
+    setSoapbox({...soapbox, [id]:value})
+  }
+
   const classes = useStyles();
 
   const [category, setCategory] = React.useState("EUR");
@@ -149,10 +167,10 @@ export function SoapboxSide(props){
                   <p id="spring-modal-description">Enter and submit your concern or idea.</p>
                   <div style={{marginTop: 20}}>
                     <TextField
-                        id="soapbox-categories"
+                        id="category"
                         select
+                        value="category"
                         label="Select Category"
-                        value={category}
                         onChange={handleChange}
                         SelectProps={{
                             native: true
@@ -171,7 +189,8 @@ export function SoapboxSide(props){
                   <div style={{marginTop: 20}}>
                     <TextField
                       required
-                      id="soapbox-subject"
+                      onChange={handleSoapbox} 
+                      id="subject"
                       label="Subject"
                       variant="outlined"
                     />
@@ -180,7 +199,8 @@ export function SoapboxSide(props){
                   <div style={{marginTop: 20}}>
                     <TextField
                       required
-                      id="soapbox-address"
+                      onChange={handleSoapbox} 
+                      id="address"
                       label="Address"
                       variant="outlined"
                     />
@@ -189,14 +209,15 @@ export function SoapboxSide(props){
                   <div style={{marginTop: 20}}>
                     <TextField
                       required
-                      id="soapbox-description"
+                      onChange={handleSoapbox} 
+                      id="description"
                       label="Description"
                       variant="outlined"
                     />
                   </div>
                               
                   <div style={{marginTop: 20}}>
-                    <Button variant="contained" color="primary" type="button">
+                    <Button variant="contained" color="primary" type="button" onClick={submitSoapbox}>
                       Publish
                     </Button>
                   </div>
