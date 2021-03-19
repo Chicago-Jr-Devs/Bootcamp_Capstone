@@ -56,7 +56,7 @@ export function Input({handleData}) {
         <p>Zip Code:</p>
         <TextField
           required
-          id="zipCode"
+          id="zipcode"
           label="Zip Code"
           variant="outlined"
           onChange={handleData}
