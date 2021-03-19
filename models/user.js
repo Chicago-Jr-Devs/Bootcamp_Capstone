@@ -1,13 +1,6 @@
-const bcrypt = require("bcryptjs");
-
+//This model allows for the user to input the info for their profile.
 module.exports = function(sequelize, DataTypes) {
   const user = sequelize.define("user", {
-    user_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true
-    },
     email: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -16,32 +9,19 @@ module.exports = function(sequelize, DataTypes) {
         isEmail: true,
       },
     },
-    password: {
+    first_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    last_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
     zipcode: {
       type: DataTypes.STRING,
       allowNull: false,
-    },
+    }
   });
-  
-  user.prototype.validPassword = function(password) {
-    return bcrypt.compareSync(password, this.password);
-  };
-  
-  user.addHook("beforeCreate", (user) => {
-    user.password = bcrypt.hashSync(
-      user.password,
-      bcrypt.genSaltSync(10),
-      null
-    );
-  });
-  user.associate = function(models) {
-     //user.hasMany(models.index, {
-      // onDelete: "cascade",
-     //});
-  };
 
   return user;
 };
