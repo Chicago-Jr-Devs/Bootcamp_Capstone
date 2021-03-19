@@ -115,6 +115,7 @@ export function SoapboxSide(props){
   }
   
   const handleSoapbox = (event) => {
+    
     const {id, value} = event.target
     setSoapbox({...soapbox, [id]:value})
   }
@@ -169,9 +170,8 @@ export function SoapboxSide(props){
                     <TextField
                         id="category"
                         select
-                        value="category"
                         label="Select Category"
-                        onChange={handleChange}
+                        onChange={handleSoapbox}
                         SelectProps={{
                             native: true
                         }}
