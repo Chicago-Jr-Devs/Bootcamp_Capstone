@@ -1,8 +1,11 @@
 import React from 'react';
-
+import { useHistory } from "react-router-dom"
+// import { useHistory } from "react-router-dom";
 // Import material UI components
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
+import Login from '../../pages/Login' 
+import Register from '../../pages/Register' 
 
 
 const useStyles = makeStyles((theme) => ({
@@ -13,7 +16,17 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+
 export function FormBtn() {
+
+  const history = useHistory();
+
+  const routeChange = () =>{ 
+    let path = `/register`; 
+    history.push(path);
+  }
+  
+
   const classes = useStyles();
 
   return (
@@ -21,9 +34,12 @@ export function FormBtn() {
         <Button variant="contained" color="primary">
           Sign in
         </Button>
-        <Button variant="outlined" color="primary">
+  
+        <Button variant="outlined" color="primary" onClick={routeChange}>
           Register
         </Button>
+      
       </div>
+      
   );
 }
