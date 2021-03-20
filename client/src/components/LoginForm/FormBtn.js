@@ -25,13 +25,18 @@ export function FormBtn() {
     let path = `/register`; 
     history.push(path);
   }
+
+  const homeChange = () =>{ 
+    let path = `/home`; 
+    history.push(path);
+  }
   
 
   const classes = useStyles();
 
   return (
       <div className={classes.root}>
-        <Button variant="contained" color="primary">
+        <Button variant="contained" color="primary" onClick={homeChange}>
           Sign in
         </Button>
   

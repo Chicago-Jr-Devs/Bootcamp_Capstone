@@ -1,5 +1,5 @@
 body {
-    background-color: #f6f6f2;
+    background-color: #fafaf8;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -13,16 +13,19 @@ h1 {
 
 p, a, li {  
     font-family: 'Barlow Semi Condensed', sans-serif;
-    font-weight: 500;
-    color: #388087;
+    font-weight: 400;
+    color: #525369;
+}
+
+input, textarea {
+    background-color: #fff;
 }
 
 .bold {
     font-weight: 700;
 }
 
-.card {
-    margin: 5%;
+.CardSoapbox {
     padding: 26px;
     background-color: #fff;
 }

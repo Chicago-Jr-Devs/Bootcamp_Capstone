@@ -1,6 +1,6 @@
 import React from "react"
-import { UserSide, SoapboxSide, CategorySide } from "../../components/MainSide"
-import { HeaderWall, SearchWall, CardWall } from "../../components/MainWall"
+import { UserSide, SoapboxSide, CategorySide } from "../../components/HomeSide"
+import { HeaderWall, SearchWall, CardWall } from "../../components/HomeWall"
 
 // Import material UI components
 import PropTypes from 'prop-types';
@@ -12,7 +12,7 @@ import withWidth from '@material-ui/core/withWidth';
 import Typography from '@material-ui/core/Typography';
 
 // Import style sheet
-import './Main.css';
+import './Home.css';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
       },
 }));
 
-function Main(props){
+function Home(props){
     const classes = useStyles();
 
     const { width } = props;      
@@ -45,7 +45,7 @@ function Main(props){
                     <Grid item xs={12} sm={3}>
                         <UserSide />
                         <SoapboxSide />
-                        <CategorySide />
+                        {/* <CategorySide /> */}
                     </Grid>
                 </Hidden>   
                 <Grid item xs={12} sm={6}>
@@ -57,35 +57,13 @@ function Main(props){
                 <Grid item xs={12} sm={3}>
                     {/* empty space on  desktop       */}
                 </Grid>
-            </Grid>
-
-            <div className={classes.root}>
-                <Typography variant="subtitle1">Current width: {width}</Typography>
-                <div className={classes.container}>
-                    <Hidden xsUp>
-                    <Paper className={classes.paper}>xsUp</Paper>
-                    </Hidden>
-                    <Hidden smUp>
-                    <Paper className={classes.paper}>smUp</Paper>
-                    </Hidden>
-                    <Hidden mdUp>
-                    <Paper className={classes.paper}>mdUp</Paper>
-                    </Hidden>
-                    <Hidden lgUp>
-                    <Paper className={classes.paper}>lgUp</Paper>
-                    </Hidden>
-                    <Hidden xlUp>
-                    <Paper className={classes.paper}>xlUp</Paper>
-                    </Hidden>
-                </div>
-            </div>
-            
+            </Grid> 
         </div>
     )
 }
 
-Main.propTypes = {
+Home.propTypes = {
     width: PropTypes.oneOf(['lg', 'md', 'sm', 'xl', 'xs']).isRequired,
 };
 
-export default withWidth()(Main);
+export default withWidth()(Home);
