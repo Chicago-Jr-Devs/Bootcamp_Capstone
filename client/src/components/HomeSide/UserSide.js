@@ -16,7 +16,7 @@ export function UserSide(props){
     
     return (
         <div className={classes.root} >
-            <div className="margin-top">
+            <div style={{marginTop: "40px"}}>
                 <Grid container spacing={4}>
                     <Grid item sm={4}>
                         <img src={Avatar} alt="User avatar" width="100px" height="100px"/>

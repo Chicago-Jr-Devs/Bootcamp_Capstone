@@ -138,7 +138,7 @@ export function SoapboxSide(props){
   };
 
   return (
-    <div className="margin-top">
+    <div style={{marginTop: "20px"}}>
       <div className={classes.root}>
         <Grid container spacing={4}>
           <Grid item sm={12}>
