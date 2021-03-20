@@ -52,7 +52,7 @@ export function Input({handleData}) {
           variant="outlined"
           onChange={handleData}
         />
-        <p className="bold" style={{fontSize: "0.8em"}}>ZIP CODE</p>
+        <p className="bold" style={{fontSize: "0.8em"}}>ZIPCODE</p>
         <TextField
           required
           id="zipcode"

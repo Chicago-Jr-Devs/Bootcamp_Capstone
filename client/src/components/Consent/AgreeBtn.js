@@ -23,7 +23,7 @@ export function AgreeBtn() {
             color="primary"
           />
         }
-        label="I agree with SoapBox chart to respect, exchange and work with my community."
+        label="I agree with SoapBox's chart to respect, exchange, and work with my community."
       />
         </FormGroup>
   );

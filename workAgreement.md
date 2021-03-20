@@ -1,4 +1,4 @@
-# We the coders
+# We the coders pledge to ...
 
 1. Develop a sense of shared responsibility
 
@@ -6,15 +6,15 @@
 
 3. Enhance the quality of the group process
 
-4. Work as a team, troubleshoot as a team, solve problem as a team
+4. Work as a team, troubleshoot as a team, solve problems as a team
 
-5. Show respect: don't interupt, accept and talk through disagreement
+5. Show respect: don't interupt, accept others' opinions, and talk through disagreements
 
-6. Make sure that every members is on board with a decision and was able to express themselves
+6. Make sure that every member is on board with a decision and was able to express themselves clearly
 
 
-## What happen when agreement is boken
+## What happens when agreement is boken ...
 
-- Talk about the issue with the person concerned
+- Talk about issues with the appropriate person concerned
 
 - And/or have a conversation with the rest of the group

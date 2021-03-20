@@ -4,8 +4,12 @@ export function InfoForm(props){
     return(
         <div>
         <h3>Why SoapBox?</h3>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <p>SoapBox provides people like you with an informal, non-partisan platform to voice opinions and concerns about the community.</p>
+        <p>As a platform designed to elevate and amplify local voices, SoapBox affords users a space to connect with others in their community to address real issues and foster a sense of local activism.</p>
+        <p></p>
+        <p></p>
+        <p>Moreover, SoapBox aims to provide all communities and neighborhoods with an avenue via which their residents can express opinions and feel heard and informed.</p>
+        <p>Basically, we want to create a dialogue between community members and local representatives.</p>
         </div>
     )
 }
