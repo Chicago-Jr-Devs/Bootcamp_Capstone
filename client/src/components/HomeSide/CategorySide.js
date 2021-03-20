@@ -30,14 +30,14 @@ export function CategorySide(props){
                     <div>
                         <h3>Categories:</h3>
                         <ul>
-                            <li><a href=""><MenuBookIcon /> Education</a></li>
+                            {/* <li><a href=""><MenuBookIcon /> Education</a></li>
                             <li><a href=""><GavelIcon /> Law Enforcement</a></li>
                             <li><a href=""><EmojiTransportationIcon /> Infrastructure</a></li>
                             <li><a href=""><CommuteIcon /> Transportation</a></li>
                             <li><a href=""><EcoIcon /> Environment</a></li>
                             <li><a href=""><NaturePeopleIcon /> Public Spaces</a></li>
                             <li><a href=""><AccountBalanceIcon /> Public Policy</a></li>
-                            <li><a href=""><AnnouncementIcon /> Others</a></li>
+                            <li><a href=""><AnnouncementIcon /> Others</a></li> */}
                         </ul>
                     </div>
                 </Grid>

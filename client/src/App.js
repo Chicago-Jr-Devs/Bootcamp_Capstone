@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 //Import react pages 
 import Consent from "./pages/Consent";
-import Main from "./pages/Main";
+import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 //Import style sheet 
@@ -23,7 +23,7 @@ export default function App() {
             <Register />
           </Route>
           <Route path="/home">
-            <Main />
+            <Home />
           </Route>
           <Route path="/consent">
             <Consent />

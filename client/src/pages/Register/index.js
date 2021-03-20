@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react";
+import RegisterImg from '../../img/drawkit-phone-conversation-colour-400px.png'
 import axios from 'axios'
 import { Header, Input, RegisterBtn } from "../../components/Register"
 import './Register.css';
@@ -39,6 +40,7 @@ export default function Register(){
             <Grid container spacing={4}>
 
                     <Grid item xs={12} sm={12} align="center">
+                        <img src={RegisterImg} alt="User avatar" style={{marginBottom: "0px"}} width="350px"/>
                         <Header />
                         <Input handleData={handleData}/>
                         <RegisterBtn submitUser={submitUser}/>

@@ -7,8 +7,8 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme) => ({
   root: {
     '& .MuiTextField-root': {
-      margin: theme.spacing(1),
-      width: '25ch',
+      margin: '0px',
+      width: '35ch',
     },
   },
 }));
@@ -19,7 +19,7 @@ export function Input({handleData}) {
   return (
     <form className={classes.root} style={{marginTop: 40}} noValidate autoComplete="off">
       <div>
-        <p>Enter an email:</p>
+        <p className="bold" style={{fontSize: "0.8em"}}>ENTER YOUR EMAIL</p>
         <TextField
           required
           id="email"
@@ -27,7 +27,7 @@ export function Input({handleData}) {
           variant="outlined"
           onChange={handleData}
         />
-        <p>Enter a password:</p>
+        <p className="bold" style={{fontSize: "0.8em"}}>ENTER YOUR PASSWORD</p>
         <TextField
           required
           id="password"
@@ -36,7 +36,7 @@ export function Input({handleData}) {
           type="password" 
           onChange={handleData}
         />
-        <p>First Name:</p>
+        <p className="bold" style={{fontSize: "0.8em"}}>FIRST NAME</p>
         <TextField
           required
           id="first_name"
@@ -44,7 +44,7 @@ export function Input({handleData}) {
           variant="outlined"
           onChange={handleData}
         />
-        <p>Last Name:</p>
+        <p className="bold" style={{fontSize: "0.8em"}}>LAST NAME</p>
         <TextField
           required
           id="last_name"
@@ -52,7 +52,7 @@ export function Input({handleData}) {
           variant="outlined"
           onChange={handleData}
         />
-        <p>Zip Code:</p>
+        <p className="bold" style={{fontSize: "0.8em"}}>ZIP CODE</p>
         <TextField
           required
           id="zipcode"
