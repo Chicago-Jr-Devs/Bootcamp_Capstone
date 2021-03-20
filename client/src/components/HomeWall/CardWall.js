@@ -97,11 +97,11 @@ export function CardWall({soapboxes}) {
         <CardContent>
           <Typography variant="body2" color="textSecondary">Latifah L.</Typography>
           <Typography paragraph>
-            I completely support this initiative
+            I completely support this initiative!
           </Typography>
           <Typography variant="body2" color="textSecondary">Peter O.</Typography>
           <Typography paragraph>
-            Let's help the community all together!
+            Let's help the community together!
           </Typography>
         </CardContent>
       </Collapse>
