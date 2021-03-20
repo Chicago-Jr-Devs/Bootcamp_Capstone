@@ -1,5 +1,6 @@
 import './Login.css';
 import { Header, Input, FormBtn } from "../../components/LoginForm"
+import LoginImg from '../../img/drawkit-content-man-colour-800px.png'
 
 // Import material UI components
 import { makeStyles } from '@material-ui/core/styles';
@@ -21,6 +22,7 @@ export default function Login(){
                     <Header />  
                     <Input />
                     <FormBtn />
+                    <img src={LoginImg} alt="User avatar" style={{marginTop: "40px"}} width="30%"/>
                 </Grid>
             </Grid>
             
