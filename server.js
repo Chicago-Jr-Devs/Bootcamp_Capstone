@@ -10,9 +10,9 @@ const environment = process.env.NODE_ENV || 'development';
 
 // Setting up port and requiring models for syncing
 const PORT = process.env.PORT || 5000;
-const SYNC_OPTIONS = {
-  force: process.env.NODE_ENV === "test",
-};
+// const SYNC_OPTIONS = {
+//   force: process.env.NODE_ENV === "test",
+// };
 
 const db = require("./models");
 // Creating express app and configuring middleware needed for authentication
@@ -41,12 +41,12 @@ app.use(passport.session());
 app.use(morgan('tiny'));
 
 if (environment === 'production') {
-  app.use(express.static('/client'));
+  app.use(express.static('/client/build'));
 }
 // Requiring our routes
 app.use(routes);
 // Syncing our database and logging a message to the user upon success
-db.sequelize.sync(SYNC_OPTIONS).then(() => {
+db.sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => {
     console.log(
       `==> 🌎  Listening on port ${PORT}. Visit http://localhost:${PORT}/ in your browser.`
