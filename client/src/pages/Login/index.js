@@ -16,7 +16,7 @@ export default function Login(){
     
     return (
         <div>
-            <Grid container spacing={4}>
+            <Grid container spacing={6}>
                 <Grid item sm={12} align="center">
                     <Header />  
                     <Input />

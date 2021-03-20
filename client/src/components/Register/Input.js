@@ -3,7 +3,6 @@ import React from 'react';
 // Import material UI components
 import TextField from '@material-ui/core/TextField';
 import { makeStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -18,7 +17,7 @@ export function Input({handleData}) {
   const classes = useStyles();
 
   return (
-    <form className={classes.root} noValidate autoComplete="off">
+    <form className={classes.root} style={{marginTop: 40}} noValidate autoComplete="off">
       <div>
         <p>Enter an email:</p>
         <TextField
