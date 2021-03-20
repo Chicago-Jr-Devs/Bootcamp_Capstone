@@ -14,6 +14,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Register(){
+    const classes = useStyles();
     const [user, setUser] = useState({email:'', password:'', first_name:'', last_name:'', zipcode:''});
     const [users, setUsers] = useState([]);
 
@@ -34,10 +35,16 @@ export default function Register(){
     useEffect(() => console.log("user", users), [users]);
 
     return (
-        <div>
-            <Header />
-            <Input handleData={handleData}/>
-            <RegisterBtn submitUser={submitUser}/>
+        <div className={classes.root}>
+            <Grid container spacing={4}>
+
+                    <Grid item xs={12} sm={12} align="center">
+                        <Header />
+                        <Input handleData={handleData}/>
+                        <RegisterBtn submitUser={submitUser}/>
+                    </Grid>
+
+            </Grid>
          </div>
     )
 };
