@@ -50,17 +50,20 @@ export function CardWall({soapboxes}) {
     setExpanded(!expanded);
   };
 
-  return (
-    <Card container spacing={4} className={classes.root}>
-      <h3>{soapboxes.subject}</h3>
+  const card = soapboxes.length
+  ? soapboxes.map(soapbox => {
+    console.log("soapboxmap", soapbox)
+    return(
+       <Card container spacing={4} className={classes.root}>
+    
       <CardHeader
         action={
           <IconButton aria-label="settings">
             <AccountBalanceIcon />
           </IconButton>
         }
-        title={soapboxes.subject}
-        subheader="March 12, 2021"
+        title={soapbox.subject}
+        subheader={soapbox.category}
       />
       <CardMedia
         className={classes.media}
@@ -69,7 +72,7 @@ export function CardWall({soapboxes}) {
       />
       <CardContent>
         <Typography variant="body2" color="textSecondary" component="p">
-            Our team want to use this platform to raise issue and create a space where the public and the local administration can work together to help their communities.
+            {soapbox.description}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
@@ -102,6 +105,21 @@ export function CardWall({soapboxes}) {
           </Typography>
         </CardContent>
       </Collapse>
-    </Card>
+    </Card> 
+    )
+    
+  }) 
+  : console.log("soapboxerrormap")
+    
+    // <div> 
+      {/* {soapbox.description} */}
+    
+    {/* </div> */}
+
+
+  return (
+    <div>
+      {card}
+    </div>
   );
 }
