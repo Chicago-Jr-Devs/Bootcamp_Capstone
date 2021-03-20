@@ -41,7 +41,8 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export function CardWall() {
+export function CardWall({soapboxes}) {
+  console.log("soapboxwall", soapboxes)
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
@@ -51,13 +52,14 @@ export function CardWall() {
 
   return (
     <Card container spacing={4} className={classes.root}>
+      <h3>{soapboxes.subject}</h3>
       <CardHeader
         action={
           <IconButton aria-label="settings">
             <AccountBalanceIcon />
           </IconButton>
         }
-        title="First Soapbox ever!"
+        title={soapboxes.subject}
         subheader="March 12, 2021"
       />
       <CardMedia
