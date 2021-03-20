@@ -6,6 +6,16 @@ const passport = require("../config/passport");
 // const apiRoutes = require("./apiRoutes/users");
 
 // router.use("/", apiRoutes);
+router.get('/soapbox', (req, res) => {
+  console.log("issueback", req.body)
+  db.issue.findAll({ 
+    
+   })
+    .then((issues) => {
+      //console.log(todos);
+      res.send(issues);
+    });
+});
 
 router.post("/register", (req, res) => {
   console.log("register", req.body)
