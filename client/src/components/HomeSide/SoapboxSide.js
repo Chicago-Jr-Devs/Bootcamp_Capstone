@@ -101,24 +101,7 @@ Fade.propTypes = {
 };
 
 
-export function SoapboxSide(props){
-  const [soapbox, setSoapbox] = useState({category: "", subject: "", address: "", description: ""});
-  const [soapboxes, setSoapboxes] = useState([])
-
-  async function submitSoapbox(event) {
-    console.log("hi", soapbox)
-    await axios.post('/soapbox', soapbox)
-    
-    setSoapboxes([...soapboxes, soapbox])
-    setSoapbox({category: "", subject: "", address: "", description: ""})
-  }
-  
-  const handleSoapbox = (event) => {
-    
-    const {id, value} = event.target
-    setSoapbox({...soapbox, [id]:value})
-  }
-
+export function SoapboxSide({submitSoapbox, handleSoapbox}){
   const classes = useStyles();
 
   const [category, setCategory] = React.useState("EUR");
