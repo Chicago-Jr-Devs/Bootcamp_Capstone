@@ -1,4 +1,5 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
+import axios from "axios";
 import { UserSide, SoapboxSide, CategorySide } from "../../components/HomeSide"
 import { HeaderWall, SearchWall, CardWall } from "../../components/HomeWall"
 
@@ -31,7 +32,40 @@ const useStyles = makeStyles((theme) => ({
       },
 }));
 
+
+
 function Home(props){
+    const [soapbox, setSoapbox] = useState({category: "", subject: "", address: "", description: ""});
+    const [soapboxes, setSoapboxes] = useState([])
+
+    useEffect(() => {
+        async function fetchSoapboxes(){
+            try {
+                const response = await axios("/soapbox")
+                setSoapboxes(response.data)
+            } catch (e){
+                console.log(e)
+            }
+        }
+        fetchSoapboxes()
+    }, [])
+
+    useEffect(() => console.log("soapbox frontend", soapboxes))
+
+    async function submitSoapbox(event) {
+      console.log("hi", soapbox)
+      await axios.post('/soapbox', soapbox)
+      
+      setSoapboxes([...soapboxes, soapbox])
+      setSoapbox({category: "", subject: "", address: "", description: ""})
+    }
+    
+    const handleSoapbox = (event) => {
+      
+      const {id, value} = event.target
+      setSoapbox({...soapbox, [id]:value})
+    }
+    
     const classes = useStyles();
 
     const { width } = props;      
@@ -44,14 +78,14 @@ function Home(props){
                 <Hidden xsDown>
                     <Grid item xs={12} sm={3}>
                         <UserSide />
-                        <SoapboxSide />
+                        <SoapboxSide submitSoapbox={submitSoapbox} handleSoapbox={handleSoapbox}/>
                         {/* <CategorySide /> */}
                     </Grid>
                 </Hidden>   
                 <Grid item xs={12} sm={6}>
                     <HeaderWall />
                     <SearchWall />
-                    <CardWall />
+                    <CardWall soapboxes={soapboxes} />
                 </Grid>
                 
                 <Grid item xs={12} sm={3}>
