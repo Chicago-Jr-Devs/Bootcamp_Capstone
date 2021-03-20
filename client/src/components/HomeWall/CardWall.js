@@ -52,7 +52,6 @@ export function CardWall({soapboxes}) {
 
   return (
     <Card container spacing={4} className={classes.root}>
-      <h3>{soapboxes.subject}</h3>
       <CardHeader
         action={
           <IconButton aria-label="settings">
