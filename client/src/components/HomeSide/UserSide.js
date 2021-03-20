@@ -24,7 +24,7 @@ export function UserSide(props){
 
                     <Grid item sm={8}>
                         <div>
-                            <h4>User Name</h4>
+                            <h4>Username</h4>
                             <a href="">My account</a>
                         </div>
                     </Grid>
