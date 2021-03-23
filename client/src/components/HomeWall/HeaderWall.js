@@ -18,7 +18,7 @@ export function HeaderWall(props){
                 <Grid container spacing={4}>
                     <Grid item sm={12} align="center">
                         <div>
-                            <h1>Soapbox</h1>
+                            <h1>SoapBox</h1>
                             <p>Raised platform for your community</p>
                         </div>
                     </Grid>
