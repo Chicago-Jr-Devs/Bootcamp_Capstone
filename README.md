@@ -9,9 +9,9 @@ If so, then look no further! True to its name, SoapBox provides people like you 
 
 
 ## Installation
-To access our application, click on the following link (INSERT LINK HERE). If you have successfully reached the web page, you will see the landing page below.
+To access our application, click on the following link ( https://soapbox-app.herokuapp.com/). If you have successfully reached the web page, you will see the landing page below.
 
-(Insert image of Login Page here)
+![SoapBox2](https://user-images.githubusercontent.com/71603259/112230684-abd00e00-8c0b-11eb-9417-953c9a43fd77.GIF)
 
 Note: This page will ask the user to enter their log-in credentials (i.e., their first name, last name, and the unique password associated with their account). A user will not be able to access additional web pages, view any content, or utilize the application's various functions before an account has been created.
 
@@ -58,6 +58,7 @@ Database Structure through mySQL
 ## Sources
 - Whimsical (www.whimsical.com)
 - Google Civic Information API (https://developers.google.com/civic-information)
+- Material UI (https://material-ui.com/)
 
 
 ## Additional Information
