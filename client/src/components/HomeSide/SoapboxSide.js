@@ -127,10 +127,10 @@ export function SoapboxSide({submitSoapbox, handleSoapbox}){
           <Grid item sm={12}>
           <Card className={classes.root}>
             <div className="CardSoapbox">
-                <h3>Create a Soapbox</h3>
-                <p>Voice your issue and get your community to engage a conversation with you.</p>
+                <h3>Create a SoapBox</h3>
+                <p>Grab a soapbox, voice your concern, and engage in a conversation with your community.</p>
                 <Button variant="contained" color="primary" type="button" onClick={handleOpen}>
-                    My Soapbox
+                    My SoapBox
                 </Button>
 
                 <Modal
@@ -147,8 +147,8 @@ export function SoapboxSide({submitSoapbox, handleSoapbox}){
                 >
                   <Fade in={open}>
                     <div className={classes.paper}>
-                      <h2 id="spring-modal-title">Create your Soapbox</h2>
-                      <p id="spring-modal-description">Enter and submit your concern or idea.</p>
+                      <h2 id="spring-modal-title">Create your SoapBox</h2>
+                      <p id="spring-modal-description">Explain and submit your concern or idea here.</p>
                       <div style={{marginTop: 20}}>
                         <TextField
                             id="category"
